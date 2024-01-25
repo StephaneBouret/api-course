@@ -36,7 +36,7 @@ class AppFixtures extends Fixture
 
             $manager->persist($user);
             
-            for ($c = 0; $c < 30; $c++) {
+            for ($c = 0; $c < mt_rand(5, 20); $c++) {
                 $customer = new Customer;
                 $customer->setFirstName($faker->firstName())
                     ->setLastName($faker->lastName)
